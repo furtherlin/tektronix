@@ -107,7 +107,7 @@ try:
     time_str = now.strftime("%d-%b-%y   %H:%M") # 格式如：10-Mar-26   14:30:05
     ax.text(0.35, -0.12, time_str, transform=ax.transAxes, color='white', fontsize=12, fontweight='bold', ha='left', va='top')
 
-    output_file = 'tek_triple_channels_fixed'+time_str.replace('   ','-')+'.png'
+    output_file = 'tek_triple_channels_fixed'+time_str.replace('   ','-').replace(":","")+'.png'
     plt.savefig(output_file, dpi=150)
     print(f"成功！圖片已儲存至: {output_file}")
 
